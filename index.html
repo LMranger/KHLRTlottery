@@ -27,6 +27,7 @@
                 document.getElementById('result').innerText = '請輸入四位有效數字！';
                 return;
             }
+            document.getElementById('result').innerText = '查詢中請稍後';
             var xhr = new XMLHttpRequest();
             xhr.open('GET', 'winners.json', true);
             xhr.onreadystatechange = function() {
