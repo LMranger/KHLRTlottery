@@ -40,17 +40,16 @@
                         return winner.card_last_four === cardLastFour;
                     });
                     if (matchingWinners.length > 0) {
-                        var resultHtml = '您可能中獎了！請核對完整卡號：<br><br>';
+                        var resultHtml = '您可能中獎了！請核對完整卡號：<br>';
                         matchingWinners.forEach(function(winner) {
                             var weekIndex = winner.week - 1;
                             var weekNumber = weeks[weekIndex].week_number;
                             var facebookLink = weeks[weekIndex].facebook_link;
                             var fullCardNumber = winner.full_card_number;
                             var prize = winner.prize;
-                            resultHtml += ''
+                            resultHtml += '<br>'
                                 + weekNumber + ': <strong>' + fullCardNumber + '</strong>' + '<a href=facebookLink> (FB公告)</a><br>' 
-                                + '-' + prize + '<br>'
-                                + '<br>';
+                                + '-' + prize + '<br>';
                         });
                         document.getElementById('result').innerHTML = resultHtml;
                     } else {
