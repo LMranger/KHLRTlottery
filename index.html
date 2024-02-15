@@ -9,13 +9,13 @@
 </head>
 <body>
     <h1>高雄輕軌成圓中獎查詢</h1>
-    <p>這是方便查詢高雄輕軌成圓中獎的非官方網站</p>
-    <p>
-        <input type="text" id="card_last_four" placeholder="電子票證末四碼" inputmode="numeric">
-        <button onclick="checkWinner()">查詢</button>
-    </p>
+    <p>　　高雄輕軌於113年元旦推出『輕軌成圓全線路段免費搭乘』服務,旅客至2月25日前只要於全線月台進出站刷卡乘車,即可參加周周抽iPhone活動。</p>
+    <!--<p>方便查詢高雄輕軌成圓中獎的非官方網站</p>-->
+    <input type="text" id="card_last_four" placeholder="電子票證末四碼" inputmode="numeric">
+    <button onclick="checkWinner()">查詢</button>
     <p id="result">請輸入卡片末四碼以查詢是否中獎</p>
     <p id="version"></p>
+    
     <hr>
     <p>官方連結： <a href="https://www.krtc.com.tw/Information/events_more?id=3180004f1e03493bbd5cdb260968753c" target="_blank">輕軌抽獎官網</a></p>
     <p><small>By Daniel and assisted by AI</small></p>
@@ -27,7 +27,7 @@
                 document.getElementById('result').innerText = '請輸入四位有效數字！';
                 return;
             }
-            document.getElementById('result').innerText = '查詢中請稍後';
+            document.getElementById('result').innerText = '查詢中請稍後...';
             var xhr = new XMLHttpRequest();
             xhr.open('GET', 'winners.json', true);
             xhr.onreadystatechange = function() {
